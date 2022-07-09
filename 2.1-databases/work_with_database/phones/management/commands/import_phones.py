@@ -14,4 +14,8 @@ class Command(BaseCommand):
 
         for phone in phones:
             # TODO: Добавьте сохранение модели
-            pass
+            # name;image;price;release_date;lte_exists
+            # print(phone['name'], phone['image'])
+            phone_info = Phone(name=phone['name'], image=phone['image'], price=phone['price'],
+                               release_date=phone['release_date'], lte_exists=phone['lte_exists'])
+            phone_info.save()
