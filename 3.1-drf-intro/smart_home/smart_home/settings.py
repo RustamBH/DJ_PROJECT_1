@@ -83,6 +83,8 @@ DATABASES = {
         'NAME': 'netology_smart_home',
         'HOST': '127.0.0.1',
         'PORT': '5432',
+        'USER': 'dj51',
+        'PASSWORD': 'dj51',
     }
 }
 
