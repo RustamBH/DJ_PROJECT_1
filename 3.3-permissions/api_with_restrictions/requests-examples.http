@@ -1,10 +1,59 @@
 # примеры API-запросов
 
-@baseUrl = https://localhost:8000/api
+@baseUrl = http://localhost:8000/api
 
 # получение объявлений
 GET {{baseUrl}}/advertisements/
 Content-Type: application/json
+# Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "title": "Ноутбук Toshiba",
+  "description": "Срочно"
+}
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "title": "Лампа Tamara",
+  "description": "Срочно"
+}
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "title": "Стол компьютерный",
+  "description": "Срочно"
+}
 
 ###
 
@@ -16,6 +65,28 @@ Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
 {
   "title": "Шкаф IKEA",
   "description": "Срочно"
+}
+
+###
+
+# попытка поменять объявление
+PATCH {{baseUrl}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "description": "Уезжаем на 2 дня"
+}
+
+###
+
+# попытка поменять объявление
+PATCH {{baseUrl}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token 534840ffd8ae1913c9b94353ca824e5c301f2770
+
+{
+  "status": "CLOSED"
 }
 
 ###
